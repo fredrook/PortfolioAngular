@@ -31,6 +31,49 @@
     <link rel="stylesheet" href="css/slicknav.css" />
     <!-- Main custom css -->
     <link href="css/custom.css" rel="stylesheet" media="screen" />
+    <style>
+      /* Estilos para o modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.753);
+        text-align: center;
+      }
+
+      .modal-content {
+        background-color: #111;
+        margin: 4% auto;
+        padding: 5px;
+        border: 1px solid #888;
+        width: 65%;
+        max-width: 1240px;
+        color: white;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .testimonial-header:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    </style>
   </head>
 
   <body data-spy="scroll" data-target="#main-navbar" data-offset="75">
@@ -142,7 +185,7 @@
             <!-- About Content start -->
             <div class="about-content wow fadeInUp" data-wow-delay="0.8s">
               <h3>Minha História</h3>
-              <p>
+              <p style="text-decoration-color: white">
                 Meu despertar pela peixão pelo mundo Tech, meu primeiro contato
                 com tecnologias, referente a programação e afins, aconteceu aos
                 23 anos, quando atuei como Projetista, um dos principais fatores
@@ -702,15 +745,21 @@
                     class="testimonial-single wow fadeInUp"
                     data-wow-delay="0.3s"
                   >
-                    <div class="testimonial-header">
+                    <div
+                      class="testimonial-header"
+                      onmouseover="showModal(this)"
+                    >
                       <figure>
-                        <img src="./images/Burguer Kenzie.jpg" alt="" />
+                        <img src="./images/Proclin.png" alt="" />
                       </figure>
-
-                      <h3>Proclin</h3>
-                      <h4>Sistema Proclin</h4>
+                      <h3>Sistema Proclin</h3>
+                      <h4>Angular + Bootstrap - C# .NET - SQL</h4>
+                      <a
+                        href="http://sistemaproclin.com.br/sistema"
+                        style="font-size: 20px"
+                        >Link para o projeto !</a
+                      >
                     </div>
-
                     <p style="text-align: justify">
                       Sistema de gerenciamento de clínicas e hospitalar Proclin
                       é uma solução completa e eficiente para a gestão de
@@ -731,14 +780,20 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="testimonial-single">
-                    <div class="testimonial-header">
+                  <div
+                    class="testimonial-single wow fadeInUp"
+                    data-wow-delay="0.3s"
+                  >
+                    <div
+                      class="testimonial-header"
+                      onmouseover="showModal(this)"
+                    >
                       <figure>
                         <img src="./images/Cadastro.jpg" alt="" />
                       </figure>
 
-                      <h3>Nu Kenzie</h3>
-                      <h4>Sistema de Cadastros NUKenzie</h4>
+                      <h3>Sistema de Cadastros NUKenzie</h3>
+                      <h4>React - HTML - CSS</h4>
                     </div>
 
                     <p style="text-align: justify">
@@ -758,14 +813,20 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="testimonial-single">
-                    <div class="testimonial-header">
+                  <div
+                    class="testimonial-single wow fadeInUp"
+                    data-wow-delay="0.3s"
+                  >
+                    <div
+                      class="testimonial-header"
+                      onmouseover="showModal(this)"
+                    >
                       <figure>
                         <img src="./images/KenzieMED.png" alt="" />
                       </figure>
 
-                      <h3>KenzieMED</h3>
-                      <h4>Sistema de gerenciamento KenzieMED</h4>
+                      <h3>Sistema de gerenciamento KenzieMED</h3>
+                      <h4>React - TypeScript - NodeJs - ExpressJs - Heroku</h4>
                     </div>
 
                     <p style="text-align: justify">
@@ -788,14 +849,20 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="testimonial-single">
-                    <div class="testimonial-header">
+                  <div
+                    class="testimonial-single wow fadeInUp"
+                    data-wow-delay="0.3s"
+                  >
+                    <div
+                      class="testimonial-header"
+                      onmouseover="showModal(this)"
+                    >
                       <figure>
                         <img src="./images/LojaMinions.png" alt="" />
                       </figure>
 
                       <h3>Loja Funko Pops</h3>
-                      <h4>Projeto Full JavaScript - HTML5 - CSS</h4>
+                      <h4>Full JavaScript - HTML5 - CSS</h4>
                     </div>
 
                     <p style="text-align: justify">
@@ -813,8 +880,14 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="testimonial-single">
-                    <div class="testimonial-header">
+                  <div
+                    class="testimonial-single wow fadeInUp"
+                    data-wow-delay="0.3s"
+                  >
+                    <div
+                      class="testimonial-header"
+                      onmouseover="showModal(this)"
+                    >
                       <figure>
                         <img src="./images/MVP.png" alt="" />
                       </figure>
@@ -824,12 +897,12 @@
                     </div>
 
                     <p style="text-align: justify">
-                      Este foi meu primeiro Portfólio que realizei, feito para
-                      que todo o conteúdo do site seja exibido em uma única
-                      página, com seções bem definidas e arquitetadas. Podendo
-                      também adicionar outras páginas e seções, mas as
-                      informações principais serão exibidas de forma sequencial,
-                      parecido com uma história.
+                      Este foi meu primeiro Portfólio, o objetivo foi criar um
+                      site em que todo o conteúdo do seja exibido em uma única
+                      página, com seções bem definidas e arquitetadas. Todo
+                      conteúdo foi separado por seções, de forma unitária e
+                      integrada, também utilizei o Figma para gerar as imagens e
+                      a disposição do site.
                     </p>
                   </div>
                 </div>
@@ -842,6 +915,33 @@
       </div>
     </section>
     <!-- Testimonial Section ends -->
+
+    <!-- Modal -->
+    <div id="myModal" class="modal" onmouseout="closeModal()">
+      <div class="modal-content">
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script>
+      function showModal(element) {
+        var modal = document.getElementById("myModal");
+        var modalContent = document.getElementById("modalContent");
+        var header = element.cloneNode(true);
+        var text = element.nextElementSibling.cloneNode(true);
+
+        modalContent.innerHTML = "";
+        modalContent.appendChild(header);
+        modalContent.appendChild(text);
+
+        modal.style.display = "block";
+      }
+
+      function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+      }
+    </script>
 
     <!-- Contact us Section Starts -->
     <!--     <section class="contactus" id="contato">

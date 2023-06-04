@@ -313,7 +313,7 @@ header .navbar.sticky-header {
 }
 
 .banner-content p {
-  color: #707070;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 1.5em;
@@ -667,9 +667,9 @@ header .navbar.sticky-header {
 }
 
 .testimonial-header {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .testimonial-header:after {
