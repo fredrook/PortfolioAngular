@@ -678,7 +678,7 @@
                       </div>
                     </div>
                   </div>
-                   <div class="col-md-3">
+                  <div class="col-md-3">
                     <div class="skill-single">
                       <h5>Visual Studio</h5>
                       <div class="skill-ratting">
@@ -689,7 +689,6 @@
                       </div>
                     </div>
                   </div>
-                  
                 </div>
 
                 <div class="row">
@@ -1082,7 +1081,7 @@
     </script> -->
 
     <!-- Contact us Section Starts -->
-    <!--     <section class="contactus" id="contato">
+    <section class="contactus" id="contato">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -1097,35 +1096,12 @@
             <div class="contact-form">
               <form id="contactForm" action="#" method="post">
                 <div class="row">
-                  <div class="form-group col-md-6 col-sm-6">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Seu Nome"
-                    />
-                  </div>
-
-                  <div class="form-group col-md-6 col-sm-6">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Seu E-Mail"
-                    />
-                  </div>
-
-                  <div class="form-group col-md-12 col-sm-12">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Assunto"
-                    />
-                  </div>
-
                   <div class="form-group col-md-12 col-sm-12">
                     <textarea
                       rows="4"
                       class="form-control"
-                      placeholder="Como posso lhe ajudar?"
+                      placeholder="Dígite aqui sua mensagem !"
+                      id="mensagem"
                     ></textarea>
                   </div>
 
@@ -1140,7 +1116,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- Contact us Section Ends -->
 
     <!-- Footer Section starts -->
@@ -1177,6 +1153,24 @@
       </div>
     </footer>
     <!-- Footer Section Ends -->
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Impede o envio do formulário padrão
+
+          var name = document.getElementById("mensagem").value; // Obtém o valor digitado pelo usuário
+
+          // Constrói o URL da API do WhatsApp com o número de telefone e o nome
+          var url =
+            "https://api.whatsapp.com/send?1=pt_BR&phone=5531989918191&text=" +
+            encodeURIComponent(name);
+
+          // Redireciona para a API do WhatsApp em uma nova aba
+          window.open(url, "_blank");
+        });
+    </script>
 
     <!-- Jquery Library File -->
     <script src="js/jquery-1.12.4.min.js"></script>

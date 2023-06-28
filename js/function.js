@@ -122,7 +122,9 @@
 				slidesPerView: 3
 			}
 		}
-    });
+	});
+	
+	 
 	
 	/*Portfolio (filtering) */
 	/* Init Isotope */
