@@ -109,9 +109,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#portfolio">Portfólio</a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="#contato">Contato</a>
-            </li> -->
+            </li>
           </ul>
 
           <div class="navbar-toggle"></div>
@@ -148,7 +148,7 @@
 
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1vemYCZRAEHRRzvLYFILxTNcAueqdmTJO/view?usp=share_link"
+                href="https://drive.google.com/file/d/1dT4wQxfvdUI4b5OSZw-lr8gWxxG3RPYT/view?usp=sharing"
                 class="btn-download"
                 >Download CV</a
               >
@@ -1154,20 +1154,19 @@
     </footer>
     <!-- Footer Section Ends -->
 
+    <!-- CONSUMINDO API WHATSAPP -->
     <script>
       document
         .getElementById("contactForm")
         .addEventListener("submit", function (event) {
-          event.preventDefault(); // Impede o envio do formulário padrão
+          event.preventDefault();
 
-          var name = document.getElementById("mensagem").value; // Obtém o valor digitado pelo usuário
+          var name = document.getElementById("mensagem").value;
 
-          // Constrói o URL da API do WhatsApp com o número de telefone e o nome
           var url =
             "https://api.whatsapp.com/send?1=pt_BR&phone=5531989918191&text=" +
             encodeURIComponent(name);
 
-          // Redireciona para a API do WhatsApp em uma nova aba
           window.open(url, "_blank");
         });
     </script>
