@@ -335,6 +335,23 @@ header .navbar.sticky-header {
   color: #0069d0;
 }
 
+.btn-linguagem {
+  display: inline-block;
+  border: 2px solid #ff6b00;
+  padding: 0px 10px;
+  min-width: 138px;
+  max-width: 138px;
+  border-radius: 4px;
+  color: #ff6b00;
+  transition: all 0.3s;
+  background: black;
+}
+
+.btn-linguagem:hover {
+  border-color: #0069d0;
+  color: #0069d0;
+}
+
 /**************************************/
 /*****     About us Section css    ****/
 /**************************************/
