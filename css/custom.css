@@ -1308,7 +1308,7 @@ header .navbar.sticky-header {
   }
 
   .banner {
-    background-position: top right;
+    background-position: inherit;
   }
 
   .section-title {
